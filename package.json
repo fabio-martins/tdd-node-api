@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/fabio-martins/tdd-node-api#readme",
   "dependencies": {
-    "express": "^4.17.2"
-  },
-  "devDependencies": {}
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
 }
