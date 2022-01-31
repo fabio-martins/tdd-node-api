@@ -1,12 +1,12 @@
 const express = require('express')
 
-const PORT = 3000;
-const HOST = '0.0.0.0';
+const PORT = 3000
+const HOST = '0.0.0.0'
 
-const app = express();
+const app = express()
 
-app.get('/',(req,res) => {
-    res.send('Server Started');
+app.get('/', (req, res) => {
+  res.send('Server Started')
 })
 
-app.listen(PORT,HOST)
+app.listen(PORT, HOST)
