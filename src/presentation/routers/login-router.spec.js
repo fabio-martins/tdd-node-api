@@ -92,6 +92,7 @@ describe('Login Router', () => {
         }
         const httpResponse = sut.route(httpRequest)
         expect(httpResponse.statusCode).toBe(200)
+        expect(httpResponse.body.acessToken).toEqual(authUseCaseSpy.acessToken)
     });
 
     test('Should return 500 if no AuthUserCase is provided', () => {
