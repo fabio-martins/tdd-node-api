@@ -21,7 +21,8 @@
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "jest": "^27.4.7"
