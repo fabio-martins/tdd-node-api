@@ -162,6 +162,7 @@ describe('Auth Usecase', () => {
     test('Should throw if invalid dependencies are  provide ', async () => {
         const loadUserByEmailRepository = makeLoadUserByEmailRepository()
         const encrypter = makeEncrypter()
+        const tokenGenerator = makeTokenGenerator()
 
         const suts = [].concat(
             new AuthUseCase(),
@@ -184,6 +185,15 @@ describe('Auth Usecase', () => {
                 loadUserByEmailRepository,
                 encrypter,
                 tokenGenerator: {}
+            }), new AuthUseCase({
+                loadUserByEmailRepository,
+                encrypter,
+                tokenGenerator
+            }), new AuthUseCase({
+                loadUserByEmailRepository,
+                encrypter,
+                tokenGenerator,
+                updateAccessTokenRepository: null
             }))
         for (const sut of suts) {
             const promise = sut.auth('any_email@mail.com', 'any_password')
