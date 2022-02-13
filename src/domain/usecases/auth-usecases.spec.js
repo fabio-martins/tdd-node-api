@@ -11,7 +11,7 @@ const makeEncrypter = () => {
     }
     const encrypterSpy = new EncrypterSpy()
     encrypterSpy.isValid = true
-    return encrypterSpy 
+    return encrypterSpy  
 }
 
 const makeEncrypterWithError = () => {
