@@ -7,16 +7,16 @@ module.exports = class AuthUseCase {
         this.encrypter = encrypter
         this.tokenGenerator = tokenGenerator
     }
-    async auth(email, password) {
+    async auth(email, password) { 
         if (!email) {
             throw new MissingParamError('email')
         }
         if (!password) {
             throw new MissingParamError('password')
-        }
-        if (!this.loadUserByEmailRepository) {
+        } 
+        if (!this.loadUserByEmailRepository) { 
             throw new MissingParamError('loadUserByEmailRepository')
-        }
+        }  
         if (!this.loadUserByEmailRepository.load) {
             throw new InvalidParamError('loadUserByEmailRepository')
         }
@@ -27,6 +27,6 @@ module.exports = class AuthUseCase {
             await this.updateAccessTokenRepository.update(user.id, accessToken)
             return accessToken
         }
-        return null
+        return null 
     }
 }
