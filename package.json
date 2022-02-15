@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --silent",
+    "test": "jest --watch",
     "start": "nodemon index.js"
   },
   "repository": {
